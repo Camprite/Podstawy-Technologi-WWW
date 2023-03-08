@@ -8,17 +8,20 @@ body{
     left: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 400;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .wrapper{
     display: grid;
     grid-template-columns: 2fr 1fr;
     background-color: rgba(255, 255, 255, 0.082);
     min-height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .left{
     background-color: rgba(255, 255, 255, 0.021);
+    border-width: 0 2px 0 0;
+    border-style: solid;
+ 
 }
 
  .profile{
@@ -40,12 +43,29 @@ body{
     align-items: center;
     flex-direction: column;
     margin-bottom: 5vh;
+    color: rgb(126, 251, 255);
 }
-.imie,.nazwisko,.miejscowosc{
-    font-size: 1.5rem;
-    color: aqua;
+.podstawoweDane h1{
+  margin: 0;
+  font-size: 2rem;
+}
+.podstawoweDane h1::before,.podstawoweDane h2::before,.podstawoweDane h3::before {
+  position: absolute;
+  content: "\00a0\00a0\00a0\00a0\00a0";
+  border-width: 0 0 2px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.5);
+ 
+}
+.podstawoweDane h2{
+  margin: 0;
+  font-size: 1.8rem;
+}
+.podstawoweDane h3{
+  margin: 0;
+  font-size: 1.6rem;
+}
 
-}
 .zainteresowania {
     z-index: 12;
     display: flex;
@@ -199,3 +219,110 @@ overflow: hidden;
        
     }
   }
+.edukacja{
+  font-size: 1.4rem;
+  writing-mode: vertical-lr;
+}
+.studia {
+  display: flex;
+  justify-content: center;
+}
+.studia::after{
+  content: "Edukacja";
+  writing-mode: vertical-lr;
+  margin-left: 2vw;
+  font-size: 1.2rem;
+}
+.studia::before{
+  content: "Edukacja";
+  writing-mode: vertical-lr;
+  margin-left: 2vw;
+  font-size: 1.2rem;
+  transform: rotate(180deg);
+}
+.powodWybraniaInformatyki{
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.powodWybraniaInformatyki::before{
+  font-size: 1.2rem;
+  padding-right: 5vh;
+  content: "Dlaczego informatyka na UPH?";
+  color: rgba(255, 255, 255, 0.5);
+
+}
+.plany{
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  text-align: center;
+  font-size: 1.5rem;
+
+}
+.plany::before{
+  font-size: 1.2rem;
+  padding-right: 5vh;
+  content: "Jakie dalsze plany?";
+  color: rgba(255, 255, 255, 0.5);
+}
+.wazneLinki{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.wazneLinki a{
+  margin: 1vh;
+  padding: 0.5vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 5px;
+  min-height: 4vh;
+  color: black;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.925);
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+}
+.wazneLinki a:hover{
+  transition: 1s;
+background-color: black;
+color: white;
+}
+.galeria{
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+.centerGaleria{
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+  font-size: 2rem;
+}
+.galeria img{
+  object-fit: cover;
+  padding: 30px;
+  padding-bottom: 10px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+.galeria>.photos{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 360px;
+  text-overflow: clip;
+  /* background-color: #00ff00; */
+  margin: 10px;
+  
+  
+  
+}
