@@ -1,13 +1,16 @@
 nav {
+    position: relative;
     display: flex;
-    min-width: 100svw;
-    min-height: 6svh;
-    flex-direction: row;
-    justify-content: center;
-    background-color: aliceblue;
+    width: 20svw;
+    /* min-height: 100svh; */
+    flex-direction: column;
+    justify-content: left;
     text-decoration: none;
 }
 nav a{
+    
+    background-color: aliceblue;
+    text-align: center;
     color: black;
     font-size: 1.1rem;
     font-weight: 700;
