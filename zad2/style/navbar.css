@@ -1,15 +1,20 @@
 nav {
-    position: relative;
+    position: sticky;
     display: flex;
-    width: 20svw;
+    width: 3.5rem;
     /* min-height: 100svh; */
-    flex-direction: column;
-    justify-content: left;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: left;
+    text-align: center;
     text-decoration: none;
+    writing-mode: vertical-rl;
+    
 }
 nav a{
-    
+    writing-mode: sideways-rl;
     background-color: aliceblue;
+    transform: rotate(180deg);
     text-align: center;
     color: black;
     font-size: 1.1rem;

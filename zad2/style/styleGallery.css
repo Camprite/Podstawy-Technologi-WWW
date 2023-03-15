@@ -1,4 +1,19 @@
 .content{
 
-    background: gold;
+    /* background: gold; */
+}
+article{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    
+}
+article>img{
+    padding: 40px;
+width: 500px;
+/* height: 500px; */
+border-radius: 20px;
+object-fit: contain;
 }

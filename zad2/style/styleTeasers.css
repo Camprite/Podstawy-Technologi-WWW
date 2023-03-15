@@ -1,4 +1,13 @@
 .content{
 
-    background: pink;
+    /* background: pink; */
+}
+article{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+iframe{
+margin: 30px;
 }
