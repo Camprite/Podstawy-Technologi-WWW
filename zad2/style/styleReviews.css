@@ -1,4 +1,18 @@
-.content{
+article{
+    display: flex;
+    padding: 20px;
+}
+table>th{
+    display:flex;
+    flex-direction: column;
+}
+td{
 
-    background: purple;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    padding: 20px;
 }
