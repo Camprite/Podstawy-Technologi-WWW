@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Dawid Borkowski</title>
+</head>
+<body>
+    <header id="menu">
+        <button onclick="showMenu()"> Pokaż menu</button>
+
+</header>
+<script async>
+    const x = document.getElementById("menu");
+
+    function showMenu(){
+        const nav = document.createElement("nav");
+        const a1 = document.createElement("a");
+        const a2 = document.createElement("a");
+        const a3 = document.createElement("a");
+        nav.setAttribute("id","mainMenu");
+        a1.textContent="Strona główna"
+        a1.href="index.html"
+        a2.textContent="Kalkulator"
+        a3.textContent="Galeria"
+        nav.append(a1,a2,a3);
+        x.append(nav);
+        const animation = nav.animate({ opacity: 1 }, 1000);
+       const promise = new Promise((res,rej)=>{
+        animation.play();
+        res();
+       })
+       setTimeout(()=>{
+        nav.style.opacity="1"
+       },999);
+        
+    }
+</script>
+</body>
+</html>
