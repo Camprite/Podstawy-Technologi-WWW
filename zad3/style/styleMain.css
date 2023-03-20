@@ -1,0 +1,31 @@
+article{
+    max-width: 75vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #146C94;
+    align-items: center;
+    /* border-radius: 20px; */
+    flex-direction: row;
+    flex-wrap: wrap;
+     
+    /* overflow-x:scroll */
+}
+#counter{
+    position: fixed;
+    top:0;
+    margin: 0;
+    height: 8vh;
+    background-color: rgba(255, 255, 255, 0.208);
+    border-radius: 0px 0px 20px 20px;
+}
+article>div{
+    margin: 5vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    background-color: rgb(19, 53, 87);
+    width: 250px;
+}

@@ -6,21 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./src/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/styleMain.css">
     <title>Dawid Borkowski</title>
 </head>
 <body>
-    <header id="menu">
-        <button onclick="showMenu()"> Pokaż menu</button>
+    <button id="buttonShowMenu" onclick="showMenu()"> Menu</button>
+    <header id="menu" style="visibility: hidden;">
+        
 
 </header>
+<span id="counter">  </span>
+<article >
+<div id="box1">1</div>
+<div id="box2">2</div>
+<div id="box3">3</div>
+<div id="box4">4</div>
+</article>
+
 <script async>
+    let count = 0;
     const x = document.getElementById("menu");
 
+    const counter = document.getElementById("counter")
+
+    const e1 = document.getElementById("box1");
+    const e2 = document.getElementById("box2");
+    const e3 = document.getElementById("box3");
+    const e4 = document.getElementById("box4")
+
+    e1.onmouseover =()=>{
+     count++;
+     counter.innerHTML = '';
+    let test = counter.appendChild(document.createElement("p"))
+        e1.style.backgroundColor = (Math.round, Math.random, 255)
+        test.textContent= "licznik: " + count
+        counter.appendChild(test)
+    }
+    e2.onmouseover =()=>{
+     count++;
+     counter.innerHTML = '';
+    let test = counter.appendChild(document.createElement("p"))
+        
+        test.textContent= "licznik: " + count
+        counter.appendChild(test)
+    }
+    e3.onmouseover =()=>{
+     count++;
+     counter.innerHTML = '';
+    let test = counter.appendChild(document.createElement("p"))
+        
+        test.textContent= "licznik: " + count
+        counter.appendChild(test)
+    }
+    e4.onmouseover =()=>{
+     count++;
+     counter.innerHTML = '';
+    let test = counter.appendChild(document.createElement("p"))
+        
+        test.textContent= "licznik: " + count
+        counter.appendChild(test)
+    }
+
+
     function showMenu(){
+        const menuId = document.getElementById("mainMenu");
+        console.log(menuId);
+
+        if(menuId==null){
         const nav = document.createElement("nav");
         const a1 = document.createElement("a");
         const a2 = document.createElement("a");
         const a3 = document.createElement("a");
+        x.style.visibility="visible"
         nav.setAttribute("id","mainMenu");
         a1.textContent="Strona główna"
         a1.href="index.html"
@@ -36,7 +93,11 @@
        setTimeout(()=>{
         nav.style.opacity="1"
        },999);
-        
+    }
+    else{
+        menuId.parentNode.removeChild(menuId)
+        x.style.visibility="hidden"
+    }
     }
 </script>
 </body>
