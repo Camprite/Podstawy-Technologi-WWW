@@ -32,7 +32,7 @@ nav#mainMenu{
 }
 #buttonShowMenu{
     font-weight: 800;
-    z-index: 10;
+    z-index: 1000;
     top:0;
     left: 0;
     position: fixed;
@@ -49,12 +49,13 @@ nav#mainMenu{
     transition: 0.6s;
 }
 header{
+    z-index: 999;
     backdrop-filter: blur(10px);
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* top:10vh; */
+    top:0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(128, 128, 128, 0.481);
@@ -79,3 +80,8 @@ nav#mainMenu>a:hover{
     background-color: black;
     transition: 0.6s;
 }
+/* .main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+} */

@@ -12,22 +12,53 @@
 <body>
     <button id="buttonShowMenu" onclick="showMenu()"> Menu</button>
     <header id="menu" style="visibility: hidden;">
-        
+    </header>
+<div class="main">
+    <span id="counter">  </span>
+    <article>
+        <div id="box1">1</div>
+        <div id="box2">2</div>
+        <div id="box3">3</div>
+        <div id="box4">4</div>
+    </article>
 
-</header>
-<span id="counter">  </span>
-<article >
-<div id="box1">1</div>
-<div id="box2">2</div>
-<div id="box3">3</div>
-<div id="box4">4</div>
-</article>
+    <div class="duzoboksow">
+        <div class="boksik" id="bckgChange">Kliknij by zmienić tło</div>
+        <div class="boksik" id="fontUp">Najedź by zmienić rozmiar fontu licznika na większy</div>
+        <div class="boksik" id="fontDown">Najedź by zmienić rozmiar fontu licznika na mniejszy</div>
+    </div>
+</div>
 
-<script async>
+<script >
     let count = 0;
     const x = document.getElementById("menu");
+    const bckgChange = document.getElementById("bckgChange");
+    const fontUp = document.getElementById("fontUp");
+    const fontDown = document.getElementById("fontDown");
+    const counter = document.getElementById("counter");
+    bckgChange.addEventListener('contextmenu',event => event.preventDefault())
+    fontUp.addEventListener('contextmenu',event => event.preventDefault())
+    fontDown.addEventListener('contextmenu',event => event.preventDefault())
+    let fontSize = 20;
+    counter.style.fontSize= fontSize+"px";
+    bckgChange.onclick = function(){
+    const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+    const r = randomBetween(0, 255);
+    const g = randomBetween(0, 255);
+    const b = randomBetween(0, 255);
+    const rgb = `rgb(${r},${g},${b})`;
+        document.body.style.backgroundColor = rgb;
 
-    const counter = document.getElementById("counter")
+    }
+    fontUp.onmouseover = function(){
+        fontSize++
+        counter.style.fontSize=fontSize+"px" ;
+    }
+    fontDown.onmouseover = function(){
+        fontSize--
+        counter.style.fontSize=fontSize+"px" ;
+    }
+
 
     const e1 = document.getElementById("box1");
     const e2 = document.getElementById("box2");
