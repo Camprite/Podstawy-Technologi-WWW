@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./src/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/styleMain.css">
+    <link rel="stylesheet" href="./style/styleGallery.css">
     <title>Dawid Borkowski</title>
 </head>
 <body>
@@ -14,23 +14,31 @@
     <header id="menu" style="visibility: hidden;">
     </header>
 <div class="main">
-    <span id="counter">  </span>
-    <article>
-        <div id="box1">1</div>
-        <div id="box2">2</div>
-        <div id="box3">3</div>
-        <div id="box4">4</div>
-    </article>
-
-    <div class="duzoboksow">
-        <div class="boksik" id="bckgChange">Kliknij by zmienić tło</div>
-        <div class="boksik" id="fontUp">Najedź by zmienić rozmiar fontu licznika na większy</div>
-        <div class="boksik" id="fontDown">Najedź by zmienić rozmiar fontu licznika na mniejszy</div>
-    </div>
-</div>
+    <div class="galery">
+        <div class="big"></div>
+        <div class="small">
+        <img src="./logo1.png" id="logo1" alt="" class="logos parent">
+        <img src="./logo2.png" id="logo2" alt="" class="logos child">
+        <img src="./logo3.png" id="logo3" alt="" class="logos child">
+        <img src="./logo4.png" id="logo4" alt="" class="logos child">
+        <img src="./logo5.png" id="logo5" alt="" class="logos child">
+        </div>
+    </div>    
 
 <script >
-    let count = 0;
+const logos = document.getElementsByClassName("logos")
+
+    logos.onclick = function () {
+ alert("TEST")       
+    }
+    
+
+
+
+
+
+
+
     const x = document.getElementById("menu");
     const bckgChange = document.getElementById("bckgChange");
     const fontUp = document.getElementById("fontUp");
