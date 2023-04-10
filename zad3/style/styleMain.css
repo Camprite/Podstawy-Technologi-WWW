@@ -31,6 +31,7 @@ article>div{
     text-align: center;
     justify-content: center;
     aspect-ratio: 1/1;
+    border-radius: 20px;
     background-color: rgb(19, 53, 87);
     width: 250px;
 }
@@ -39,7 +40,8 @@ article>div{
     aspect-ratio: 1/1;
     width: 10rem;
     margin: 5rem;
-    background-color: aqua;
+    background-color: rgb(26, 86, 86);
+    border-radius: 20px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -52,4 +54,11 @@ article>div{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+.beforeArticle{
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
 }

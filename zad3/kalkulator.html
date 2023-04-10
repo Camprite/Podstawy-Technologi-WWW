@@ -14,78 +14,57 @@
     <header id="menu" style="visibility: hidden;">
     </header>
 <div class="main">
+ <div class="kalkulator">
+    <input type="number" name="Podaj pierwszą liczbe" id="number1">
+    <select name="dzialania" id="dzialania">
+        <option value="add">+</option>
+        <option value="sub">-</option>
+        <option value="mul">*</option>
+        <option value="div">/</option>
+    </select>
     
+    <input type="number" name="Podaj drugą liczbe" id="number2">
+    <button type="submit" onclick="oblicz()">=</button>
+    <p id="wynik">score </p>
+
+ </div>    
 
 <script >
+    let num1 = document.getElementById("number1");
+    let num2 = document.getElementById("number2");
+    let dzialanie = document.getElementById("dzialania");
+    let wynik = document.getElementById("wynik");
+    let znak = "  "
+    let wynik2;
+function oblicz(){
+    switch(dzialanie.value){
+        case 'add':
+            znak = " + "
+            wynik2 = parseInt(num1.value) + parseInt(num2.value);
+            wynik.innerHTML = String(num1.value + znak +  num2.value +"     = "+ wynik2);
+            break;
+        case 'sub':
+            znak = " - "
+            wynik2 = parseInt(num1.value) - parseInt(num2.value);
+            wynik.innerHTML = String(num1.value + znak +  num2.value +"     = "+ wynik2);
+            break;
+        case 'mul':
+            znak = " * "
+            wynik2 = parseInt(num1.value) * parseInt(num2.value);
+            wynik.innerHTML = String(num1.value + znak +  num2.value +"     = "+ wynik2);
+            break;
+        case 'div':
+            znak = " / "
+            wynik2 = parseInt(num1.value) / parseInt(num2.value);
+            wynik.innerHTML = String(num1.value + znak +  num2.value +"     = "+ wynik2);
+            break;
+    }
+}
+
+
     let count = 0;
     const x = document.getElementById("menu");
-    const bckgChange = document.getElementById("bckgChange");
-    const fontUp = document.getElementById("fontUp");
-    const fontDown = document.getElementById("fontDown");
-    const counter = document.getElementById("counter");
-    bckgChange.addEventListener('contextmenu',event => event.preventDefault())
-    fontUp.addEventListener('contextmenu',event => event.preventDefault())
-    fontDown.addEventListener('contextmenu',event => event.preventDefault())
-    let fontSize = 20;
-    counter.style.fontSize= fontSize+"px";
-    bckgChange.onclick = function(){
-    const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
-    const r = randomBetween(0, 255);
-    const g = randomBetween(0, 255);
-    const b = randomBetween(0, 255);
-    const rgb = `rgb(${r},${g},${b})`;
-        document.body.style.backgroundColor = rgb;
-
-    }
-    fontUp.onmouseover = function(){
-        fontSize++
-        counter.style.fontSize=fontSize+"px" ;
-    }
-    fontDown.onmouseover = function(){
-        fontSize--
-        counter.style.fontSize=fontSize+"px" ;
-    }
-
-
-    const e1 = document.getElementById("box1");
-    const e2 = document.getElementById("box2");
-    const e3 = document.getElementById("box3");
-    const e4 = document.getElementById("box4")
-
-    e1.onmouseover =()=>{
-     count++;
-     counter.innerHTML = '';
-    let test = counter.appendChild(document.createElement("p"))
-        e1.style.backgroundColor = (Math.round, Math.random, 255)
-        test.textContent= "licznik: " + count
-        counter.appendChild(test)
-    }
-    e2.onmouseover =()=>{
-     count++;
-     counter.innerHTML = '';
-    let test = counter.appendChild(document.createElement("p"))
-        
-        test.textContent= "licznik: " + count
-        counter.appendChild(test)
-    }
-    e3.onmouseover =()=>{
-     count++;
-     counter.innerHTML = '';
-    let test = counter.appendChild(document.createElement("p"))
-        
-        test.textContent= "licznik: " + count
-        counter.appendChild(test)
-    }
-    e4.onmouseover =()=>{
-     count++;
-     counter.innerHTML = '';
-    let test = counter.appendChild(document.createElement("p"))
-        
-        test.textContent= "licznik: " + count
-        counter.appendChild(test)
-    }
-
-
+    
     function showMenu(){
         const menuId = document.getElementById("mainMenu");
         console.log(menuId);

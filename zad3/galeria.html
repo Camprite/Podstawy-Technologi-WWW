@@ -15,21 +15,22 @@
     </header>
 <div class="main">
     <div class="galery">
-        <div class="big"></div>
+        <div class="big" id="big"></div>
         <div class="small">
-        <img src="./logo1.png" id="logo1" alt="" class="logos parent">
-        <img src="./logo2.png" id="logo2" alt="" class="logos child">
-        <img src="./logo3.png" id="logo3" alt="" class="logos child">
-        <img src="./logo4.png" id="logo4" alt="" class="logos child">
-        <img src="./logo5.png" id="logo5" alt="" class="logos child">
+        <img src="./logo1.png" id="logo1" onClick="changeImage(this.id)" alt="" class="logos parent">
+        <img src="./logo2.png" id="logo2" onClick="changeImage(this.id)" alt="" class="logos child">
+        <img src="./logo3.png" id="logo3" onClick="changeImage(this.id)" alt="" class="logos child">
+        <img src="./logo4.png" id="logo4" onClick="changeImage(this.id)" alt="" class="logos child">
+        <img src="./logo5.png" id="logo5" onClick="changeImage(this.id)" alt="" class="logos child">
         </div>
     </div>    
 
 <script >
-const logos = document.getElementsByClassName("logos")
-
-    logos.onclick = function () {
- alert("TEST")       
+const holder = document.getElementById("big");
+const item = document.createElement("img");
+    function changeImage(inputId) {
+        item.src=document.getElementById(inputId).src
+               holder.appendChild(item);
     }
     
 

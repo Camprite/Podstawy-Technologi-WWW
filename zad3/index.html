@@ -15,11 +15,12 @@
     </header>
 <div class="main">
     <span id="counter">  </span>
+    <span class="beforeArticle"> Najedź na kwadrat by zwiększyć licznik</span>
     <article>
-        <div id="box1">1</div>
-        <div id="box2">2</div>
-        <div id="box3">3</div>
-        <div id="box4">4</div>
+        <div id="box1">+1</div>
+        <div id="box2">+2</div>
+        <div id="box3">+3</div>
+        <div id="box4">+4</div>
     </article>
 
     <div class="duzoboksow">
@@ -74,7 +75,7 @@
         counter.appendChild(test)
     }
     e2.onmouseover =()=>{
-     count++;
+     count = count+2;
      counter.innerHTML = '';
     let test = counter.appendChild(document.createElement("p"))
         
@@ -82,7 +83,7 @@
         counter.appendChild(test)
     }
     e3.onmouseover =()=>{
-     count++;
+     count = count+3;
      counter.innerHTML = '';
     let test = counter.appendChild(document.createElement("p"))
         
@@ -90,7 +91,7 @@
         counter.appendChild(test)
     }
     e4.onmouseover =()=>{
-     count++;
+     count = count+4;
      counter.innerHTML = '';
     let test = counter.appendChild(document.createElement("p"))
         
