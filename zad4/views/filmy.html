@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 4</title>
+    <link rel="shortcut icon" href="../src/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/filmyStyle.css">
+    
+</head>
+<body>
+<!-- Do not change  -->
+<button id="buttonShowMenu" onclick="showMenu()"> Menu</button>
+<header id="menu" style="visibility: hidden;">
+</header>
+<!-- Do not change  -->
+
+<table>
+    <thead>
+        <td>Lp.</td>
+        <td>Tytuł</td>
+        <td>Reżyser</td>
+        <td>Rok produkcji</td>
+    </thead>
+    <tbody id="output">
+    
+    </tbody>
+</table>
+<div class="inputs">
+    <input id="inTitle" type="text">
+    <input id="inDirector" type="text">
+    <input id="inDate" type="number">
+    <button onclick="dodaj()">Dodaj film</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Defer powoduje równoległe pobieranie skryptu z tworzeniem
+strony i wykonaniu(skryptu) po pełnym załadowaniu strony -->
+<script defer src="../script/main.js" type="text/javascript"></script>
+<script defer src="../script/menu.js" type="text/javascript"></script>
+<script defer src="../script/filmy.js" type="text/javascript"></script>
+</body>
+</html>
