@@ -2,3 +2,44 @@ tr:nth-child(even) {
     background-color: white;
     color: black;
 }
+td{
+    /* border-style: solid; */
+    /* border-color: red; */
+    font-size: 1.5rem;
+}
+tr{
+    /* display: flex; */
+    /* justify-items: center; */
+    text-align: center;
+}
+table{
+    table-layout: fixed;
+    width: 100%;
+    row-gap: 20rem;
+    column-gap: 20rem;
+}
+tfoot input,tfoot button{
+width: 90%;    
+font-size: 1.2rem;
+font-weight: 600;
+border-radius: 5px;
+}
+tfoot input,tfoot button ::placeholder{
+text-align: center;
+font-weight: 200;
+}
+tfoot     button{
+    background-color: gray;
+    border-color: white;
+}
+tfoot button:hover{
+    transition: 0.4s;
+    border-color: black;
+    background-color: white;
+}
+thead td{
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 4px;
+}
