@@ -1,0 +1,55 @@
+header{
+    font-size: 1.8rem;
+    font-weight: 550;
+}
+li{
+    list-style-type: none;
+}
+
+li::before{
+    margin-right: 20px;
+    margin-left: -30px;
+background-image: url("../src/duckdance.gif");
+background-size: contain;
+content: '';
+     display: inline-block;
+     height: 2rem;
+      width: 2rem;
+     background-repeat: no-repeat;
+    list-style-type: none;
+}
+ul{
+    
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+.input{
+    display: flex;
+    justify-content: space-around;
+}
+.input>button,.input>input{
+    min-width: 12rem;
+    min-height: 1.3rem;
+    border-radius: 10px;
+    border-width: 0;
+}
+.input ::placeholder{
+    text-align: center;
+}
+.input button:hover{
+    background-color: gray;
+    
+    transition: 0.6s;
+}
+
+@keyframe zanik {
+
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+
+}

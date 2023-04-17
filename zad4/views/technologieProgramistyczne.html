@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="../src/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/menu.css">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/styleTechnologie.css">
     
 </head>
 <body>
@@ -16,23 +17,27 @@
 <header id="menu" style="visibility: hidden;">
 </header>
 
+<article class="grid">
+    <div class="left">
+        <header>Technologie które chciałbym opanować i dodać do swojego CV</header>
+        <ul id="technologie">
 
 
-
-
-
-
-
-
-
-
-
-
-
+        </ul>
+        <div class="input">
+            <input id="input" placeholder="Podaj technologie" type="text" name="" id="">
+            <button onclick="dodajTechnologie()"> Dodaj</button>
+            <button onclick="usunTechnologie()"> Usuń ostatni rekord</button>
+            <button onclick="usunWszystkieTechnologie()"> Usuń wszystkie technologie</button>
+        </div>
+    </div>
+    <div class="right"></div>
+</article>
 
 <!-- Defer powoduje równoległe pobieranie skryptu z tworzeniem
 strony i wykonaniu(skryptu) po pełnym załadowaniu strony -->
 <script src="../script/main.js" type="text/javascript"></script>
 <script src="../script/menu.js" type="text/javascript"></script>
+<script src="../script/technologie.js" type="text/javascript"></script>
 </body>
 </html>
