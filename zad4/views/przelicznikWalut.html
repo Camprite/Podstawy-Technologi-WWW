@@ -17,6 +17,16 @@
 </header>
 
 
+<div class="glowny">
+    <input type="number" placeholder="Podaj walute" name="" id="wartosc">
+    <select name="" id="select">
+        <option value="euro">Euro</option>
+        <option value="dolar">Dolar</option>
+    </select>
+    <button onclick="przelicz()">Przelicz</button>
+    <p id="output"></p>
+</div>
+
 
 
 
@@ -32,7 +42,7 @@
 
 <!-- Defer powoduje równoległe pobieranie skryptu z tworzeniem
 strony i wykonaniu(skryptu) po pełnym załadowaniu strony -->
-<script src="../script/main.js" type="text/javascript"></script>
+<script src="../script/przelicznik.js" type="text/javascript"></script>
 <script src="../script/menu.js" type="text/javascript"></script>
 </body>
 </html>
