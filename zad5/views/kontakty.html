@@ -19,6 +19,7 @@
 <table class="outputtable">
     <thead >
 <tr>
+    <td>Lp.</td>
     <td>Imie</td>
     <td>Nazwisko</td>
     <td>Mail</td>
@@ -28,14 +29,14 @@
     <td>Grupa</td>
 </tr>
     </thead>
-    <tbody>
+    <tbody id="output">
 
     </tbody>
 
 </table>
 <div id="form">
     <input type="text" name="imie" placeholder="Imie" id="INPimie">
-    <input type="text" name="nazwisko" placeholder="Nazwisko" id="INPnazwiko">
+    <input type="text" name="nazwisko" placeholder="Nazwisko" id="INPnazwisko">
     <input type="email" name="mail" placeholder="Mail" id="INPmail">
     <input type="number" name="wiek" placeholder="Wiek" id="INPwiek">
     <input type="date" name="dataur" placeholder="Data urodzenia" id="INPdataur">
@@ -49,14 +50,18 @@
             <label for="iswomen">Kobieta</label>
         </div>
     </fieldset>
-    <select name="grupa" id="">
-        <option value="rodzina">Rodzina</option>
-        <option value="przyjaciele">Przyjaciele</option>
-        <option value="praca">Praca</option>
-        <option value="znajomi">Znajomi</option>
+    <select name="grupa" id="INPgrupa">
+        <option value="Rodzina">Rodzina</option>
+        <option value="Przyjaciele">Przyjaciele</option>
+        <option value="Praca">Praca</option>
+        <option value="Znajomi">Znajomi</option>
     </select>
-    <button type="submit" onclick="dodajKontakt()">Dodaj kontakt</button>
+    <button id="przycisk" type="submit" onclick="dodajKontakt()">Dodaj kontakt</button>
 
+</div>
+<div id="dog">
+    <img src="../src/earth.png" id="planeta" alt="planeta" srcset="" >
+    <img src="../src/dogstop.gif" alt="running dog" srcset="" id="piesel" class="piesel">
 </div>
 
 
