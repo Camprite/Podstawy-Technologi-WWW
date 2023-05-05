@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 5 Kontakty</title>
+    <link rel="shortcut icon" href="../src/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet" href="../style/kontakty.css">
+    <link rel="stylesheet" href="../style/style.css">
+    
+</head>
+<body>
+
+<button id="buttonShowMenu" onclick="showMenu()"> Menu</button>
+<header id="menu" style="visibility: hidden;">
+</header>
+<table class="outputtable">
+    <thead >
+<tr>
+    <td>Imie</td>
+    <td>Nazwisko</td>
+    <td>Mail</td>
+    <td>Wiek</td>
+    <td>Data urodzenia</td>
+    <td>Płeć</td>
+    <td>Grupa</td>
+</tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+
+</table>
+<div id="form">
+    <input type="text" name="imie" placeholder="Imie" id="INPimie">
+    <input type="text" name="nazwisko" placeholder="Nazwisko" id="INPnazwiko">
+    <input type="email" name="mail" placeholder="Mail" id="INPmail">
+    <input type="number" name="wiek" placeholder="Wiek" id="INPwiek">
+    <input type="date" name="dataur" placeholder="Data urodzenia" id="INPdataur">
+    <fieldset id="plec">
+        <div>
+            <input type="radio" value="man" name="plec" placeholder="Mężczyzna" id="plecM" checked>
+            <label for="isman">Mężczyzna</label>    
+        </div>
+        <div>
+            <input type="radio" value="woman" name="plec" placeholder="Kobieta" id="plecK" >
+            <label for="iswomen">Kobieta</label>
+        </div>
+    </fieldset>
+    <select name="grupa" id="">
+        <option value="rodzina">Rodzina</option>
+        <option value="przyjaciele">Przyjaciele</option>
+        <option value="praca">Praca</option>
+        <option value="znajomi">Znajomi</option>
+    </select>
+    <button type="submit" onclick="dodajKontakt()">Dodaj kontakt</button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Defer powoduje równoległe pobieranie skryptu z tworzeniem
+strony i wykonaniu(skryptu) po pełnym załadowaniu strony -->
+<script src="../script/dodajKontakt.js" type="text/javascript"></script>
+<script src="../script/main.js" type="text/javascript"></script>
+<script src="../script/menu.js" type="text/javascript"></script>
+</body>
+</html>
