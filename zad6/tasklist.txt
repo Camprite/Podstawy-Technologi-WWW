@@ -1,0 +1,22 @@
+-Dodaj jQuery
+-Zadania oddzielaj kreską (element hr)
+1.-Po załadowaniu strony wyświetl alert "Strona załadowana"
+-Reszte zadań też wykonuj w funkcji ready
+
+2.-Nagłówek "Witaj na stronie!" po 3 sekundach ma się zwinąć 
+do góry (metoda sliding,delay) do wybrania nagłówna użyj id
+3.-Przycisk "Pokaż/Ukryj" po kliknięciu ma pokazywać/ukrywać
+diva z listą uporządkowaną 3 potraw wielkanocnych?
+4.  -Stworz 3 paragrafy z krótkimi tekstami(wszystkie mają jedną klase)
+    -Listę rozwijaną z pięcioma kolorami
+    -Dwa przyciski
+    -Pierwszy przycisk zmienia kolor czcionki na wybrany w liście
+    -Drugi kolor ich tła(Chyba też z listy pobierasz)
+5.-Paragraf z życzeniami świątecznymi do tego dwie klasy z różnym stylem
+    -Stwórz dwa przyciski przełączające pomiędzy klasami
+6.-Stwórz pole tekstowe i paragraf 
+    -Po wciśnięciu Enter wstaw tekst do paragrafu
+7.-Stwórz mini galerie 1 duży obrazek jeden mały, po kliknięciu małego ma przenieść się na duzy 
+
+8.-Pusta lista nieuporządkowana pole tekstowe i przycisk
+    -Po kliknięciu przycisku ma dodać tekst do listy

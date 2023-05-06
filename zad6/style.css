@@ -1,0 +1,31 @@
+body{
+    background-color: #00000;
+}
+.class51{
+background-color: #213700;
+color: white;
+max-width: 30svw;
+border-radius: 20px;
+padding: 10px;
+text-transform: lowercase;
+letter-spacing: 0.5rem;
+}
+.class52{
+    background-color: #002137;
+    color: #FF2137;
+    max-width: 30svw;
+    border-radius: 20px;
+    padding: 10px;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+}
+textarea{
+    resize: none;
+}
+#male>img{
+    width: 10vw;
+}
+#duze>img{
+    width: 30vw;
+    
+}
