@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Maj 20, 2023 at 03:32 PM
+-- Generation Time: Maj 21, 2023 at 08:52 PM
 -- Wersja serwera: 10.4.28-MariaDB
--- Wersja PHP: 8.1.17
+-- Wersja PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,10 +44,9 @@ CREATE TABLE `dzbany` (
 INSERT INTO `dzbany` (`id`, `idKategorii`, `nazwa`, `obrazek`, `opis`, `pojemność`, `wysokość`) VALUES
 (1, 5, 'Jerzy', '', 'Dzban metalowy Jerzy, bardzo dobry.', 21, 37),
 (2, 4, 'Karol', '', 'Człowiek który został naczyniem', 10, 12),
-(3, 1, 'Morawiecki', '', 'Naczelny dzban Polski', 1, 180),
 (4, 2, 'Kwaśniewski', '', 'Pół człowiek, pół litra', 7, 171),
 (5, 3, 'Janusz', '', 'Posiada niewidzialną rączkę wolnego rynku', 5, 189),
-(6, 6, 'Szafranowcz', '', 'Do niczego się nie nadaje.', 0, 90);
+(6, 2, 'Szafranowczsqlup', '', 'Do niczego się niesqlup nadaje.', 222, 3333);
 
 -- --------------------------------------------------------
 
@@ -120,7 +119,7 @@ ALTER TABLE `recenzje`
 -- AUTO_INCREMENT for table `dzbany`
 --
 ALTER TABLE `dzbany`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `kategorie`
