@@ -1,0 +1,10 @@
+.mainItem{
+    max-width: 10vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.mainContainer{
+    display: flex;
+    
+}
