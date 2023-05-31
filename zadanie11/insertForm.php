@@ -7,6 +7,9 @@
     <title>Dodaj Rekord</title>
 </head>
 <body>
+<?php
+ require("menu.php");
+?>
     <?php 
 
     //error handeling dla wprowadzenia zdjęcia które już jest w bazie

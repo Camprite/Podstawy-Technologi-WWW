@@ -8,12 +8,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+        <?php
+ require("header.php");
+?>
+
 
     <div class="content">
         
+
+
     <?php
- $conn = new mysqli("localhost", "root", "", "dzbanyv2db");
- $sql = "SELECT id, nazwa FROM kategorie";
+$sql = "SELECT id, nazwa FROM kategorie";
  $result = $conn->query($sql);
  echo "<a href='index.php'> Wszyskie</a>";
  while($row = $result->fetch_object()) {

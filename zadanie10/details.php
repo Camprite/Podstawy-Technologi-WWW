@@ -7,6 +7,9 @@
     <title>Szczegóły</title>
 </head>
 <body>
+<?php
+ require("header.php");
+?>
 <style>
     .object{
         display:flex;
@@ -47,17 +50,6 @@ echo "
 
 <?php 
 $id = $_GET["id"];
-$conn = new mysqli("localhost", "root", "", "dzbanyv2db");
-
-
-
-
-
-
-
-
-
-
 
 echo "<span class='object'>";
 $sql = "SELECT AVG(ocena) AS srednia FROM recenzje WHERE idDzbana=$id";
@@ -105,7 +97,6 @@ if($result->num_rows > 0){
 
 <form action="insertReview.php" method="post">
 <input type="hidden" name='id' value="<?php echo $_GET["id"] ?>" > </input> 
-<input type="text" name="nazwa" id="">
 <select name="ocena" id="">
     <option value="1">1</option>
     <option value="2">2</option>

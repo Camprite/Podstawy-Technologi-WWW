@@ -5,15 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dzbany</title>
+    <script src="jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+        <?php
+ require("menu.php");
+?>
+
 
     <div class="content">
         
+
+
     <?php
- $conn = new mysqli("localhost", "root", "", "dzbanyv2db");
- $sql = "SELECT id, nazwa FROM kategorie";
+$sql = "SELECT id, nazwa FROM kategorie";
  $result = $conn->query($sql);
  echo "<a href='index.php'> Wszyskie</a>";
  while($row = $result->fetch_object()) {

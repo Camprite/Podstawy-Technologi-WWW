@@ -1,9 +1,11 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "dzbanyv2db");
+require("menu.php");
+?>
+<?php
 
 
 $id = $_POST["id"];
-$nazwa = $_POST["nazwa"];
+$nazwa = $_SESSION["login"];
 $ocena = $_POST["ocena"];
 $tresc = $_POST["tresc"];
 

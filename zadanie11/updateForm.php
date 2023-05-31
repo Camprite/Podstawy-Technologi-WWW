@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+<?php
+ require("menu.php");
+?>
     <?php 
     $id = $_GET['id'];
     $conn = new mysqli("localhost", "root", "", "dzbanyv2db");
