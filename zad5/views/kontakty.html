@@ -13,6 +13,37 @@
 </head>
 <body>
 
+    <style>
+        /* Tooltip container */
+        .tooltip {
+          position: relative;
+          display: inline-block;
+          border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+        }
+        
+        /* Tooltip text */
+        .tooltip .tooltiptext {
+            top: -100px;
+            left: 0;
+          visibility: hidden;
+          width: 120px;
+          background-color: rgba(255, 255, 255, 0.334);
+          color: #000000;
+          text-align: center;
+          padding: 5px 0;
+          border-radius: 6px;
+         
+          /* Position the tooltip text - see examples below! */
+          position: absolute;
+          z-index: 1;
+        }
+        
+        /* Show the tooltip text when you mouse over the tooltip container */
+        .tooltip:hover .tooltiptext {
+          visibility: visible;
+        }
+        </style>
+        
 <button id="buttonShowMenu" onclick="showMenu()"> Menu</button>
 <header id="menu" style="visibility: hidden;">
 </header>
@@ -56,7 +87,8 @@
         <option value="Praca">Praca</option>
         <option value="Znajomi">Znajomi</option>
     </select>
-    <button id="przycisk" type="submit" onclick="dodajKontakt()">Dodaj kontakt</button>
+    <button id="przycisk"  class="tooltip" type="submit" onclick="dodajKontakt()">Dodaj kontakttt
+    <span class="tooltiptext">Dodawanie nowego kontaktu do tabeli</span></button>
 
 </div>
 <div id="dog">
