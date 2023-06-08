@@ -1,9 +1,16 @@
+@font-face {
+    font-family: Roboto;
+    src: url(fontRoboto/Roboto-Regular.ttf);
+  }
+  
 *{
+    font-family: Roboto;
     margin: 0;
     padding: 0;
     background-color: rgb(0, 0, 0);
     color: rgb(255,255,255);
     box-sizing: border-box;
+    /* filter: blur(1px); */
 }
 body{
     height: 100%;
@@ -47,13 +54,19 @@ footer{
     background-color: rgb(0, 0, 0);
 }
 .dayName, .toolbar{
+    user-select: none;
     display: block;
     width: 100%;
     justify-content: center;
     text-align: center;
     align-items: center;
 }
+.tools{
+    display: flex;
+    flex-direction: column;
+}
 .hour{
+    user-select: none;
     display: block;
     width: 100%;
     background-color: #fff;
@@ -65,6 +78,10 @@ footer{
     justify-content: center;
     align-items: center;
     
+}
+.hour:hover{
+    transform: scale(95%);
+    transition: 1s;
 }
 /* TODO skalowanie numeru godziny */
 .hournumber{
@@ -89,6 +106,7 @@ footer{
     
 }
 .tasks{
+    user-select: none; 
     display: flex;
     overflow-x: scroll;
     bottom: 0;
@@ -100,13 +118,17 @@ footer{
     background-color: bisque;
     margin: 0.5rem;
 }
+.task:hover{
+    transform: scale(95%);
+    transition: 0.5s;
+}
 .header{
     display: flex;
     flex-direction: row;
      
 }
 .header-item{
-    
+    user-select: none;
     margin: 0.2rem;
     padding: 0.2rem;
     position: relative;
@@ -121,5 +143,93 @@ footer{
     background-color: inherit;
     color: inherit;
     position: relative;
-    top: 25%;
+    
+}
+.header>button{
+    border-radius: 5px;
+    border-style: none;
+    font-weight: bold;
+    background-color: blueviolet;
+}
+
+.header>button:hover{
+    transform: scale(95%);
+    transition: 0.5s;
+    border-radius: 5px;
+    border-style: none;
+    font-weight: bold;
+    background-color: firebrick;
+}
+.header>button:active{
+    transform: scale(90%);
+    transition: 0.5s;
+    border-radius: 5px;
+    border-style: none;
+    font-weight: bold;
+    background-color: rgb(168, 151, 151);
+}
+.loginContent>*{
+    background-color: inherit;
+    margin-top: 5%;
+
+}
+.loginSection{
+    border-radius: 20px;
+    /* padding-top: 100px; */
+    height: 70vh;
+    width: 40vw;
+    z-index: 999;
+    top: 10%;
+    left: 30%;
+    background-color: blueviolet;
+    align-items: center;
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+}
+.loginSection>*{
+    background-color: inherit;
+
+}
+.blurred{
+    filter: blur(0);
+
+}
+
+.loginContent{
+    user-select: none;
+    text-align: center;
+    margin-top: 3rem;
+}
+.loginContent>button{
+    background-color: blue;
+    border-radius: 5px;
+    border-style: none;
+    padding: 3%;
+    font-weight: bold;
+}
+.loginContent>button:hover{
+    transform: scale(95%);
+    transition: 0.5s;
+    border-radius: 5px;
+    border-style: none;
+    font-weight: bold;
+    background-color: firebrick;
+}
+.loginContent>button:active{
+    transform: scale(90%);
+    transition: 0.5s;
+    border-radius: 5px;
+    border-style: none;
+    font-weight: bold;
+    background-color: rgb(168, 151, 151);
+}
+.loginContent>input{
+    border-radius: 20px;
+    padding: 3%;
+}
+.loginContent>input::placeholder{
+    text-align: center;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5)
 }

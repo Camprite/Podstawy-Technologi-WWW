@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>onTomorrow</title>
-    <script src="sc"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+
 </head>
-<body>
-    <header class="header">Head
-<div class="header-item login"><p>Zaloguj</p></div>
-<div class="header-item wyloguj"><p>Wyloguj</p></div>
+<body id="body"> 
+    <header class="header">
+<button class="header-item login" onclick="zaloguj()"><p>Zaloguj</p></button>
+<button class="header-item wyloguj" onclick="wyloguj()"><p>Wyloguj</p></button>
 
     </header>
     <article class="row">
-        <div class="main">
+        <div class="main ">
       <!-- START Day section -->
         <div class="week">
-            <div class="day"><span class="dayName">Poniedziałek</span>
+            <div class="day" id="monday" ><span class="dayName" >Poniedziałek</span>
             <div id="hour0" class="hour"><span class="hournumber">0</span></div>
             <div id="hour1" class="hour"><span class="hournumber">1</span></div>
             <div id="hour2" class="hour"><span class="hournumber">2</span></div>
@@ -45,7 +46,7 @@
             <div id="hour23" class="hour"><span class="hournumber">23</span></div>
             </div>
 
-            <div class="day"><span class="dayName">Wtorek</span> 
+            <div class="day" id="tuesday"><span class="dayName" >Wtorek</span> 
                 <div id="hour0" class="hour"><span class="hournumber">0</span>
             </div>
             <div id="hour1" class="hour"><span class="hournumber">1</span></div>
@@ -72,7 +73,7 @@
             <div id="hour22" class="hour"><span class="hournumber">22</span></div>
             <div id="hour23" class="hour"><span class="hournumber">23</span></div>
         </div>
-            <div class="day"><span class="dayName">Środa</span> 
+            <div class="day" id="Wednesday "><span class="dayName" >Środa</span> 
                 <div id="hour0" class="hour"><span class="hournumber">0</span></div>
                 <div id="hour1" class="hour"><span class="hournumber">1</span></div>
                 <div id="hour2" class="hour"><span class="hournumber">2</span></div>
@@ -98,7 +99,7 @@
                 <div id="hour22" class="hour"><span class="hournumber">22</span></div>
                 <div id="hour23" class="hour"><span class="hournumber">23</span></div>
             </div>
-            <div class="day"><span class="dayName">Czwartek</span>
+            <div class="day" id="thursday"><span class="dayName">Czwartek</span>
                 <div id="hour0" class="hour"><span class="hournumber">0</span></div>
                 <div id="hour1" class="hour"><span class="hournumber">1</span></div>
                 <div id="hour2" class="hour"><span class="hournumber">2</span></div>
@@ -124,7 +125,7 @@
                 <div id="hour22" class="hour"><span class="hournumber">22</span></div>
                 <div id="hour23" class="hour"><span class="hournumber">23</span></div>
             </div>
-            <div class="day"><span class="dayName">Piątek</span>
+            <div class="day" id="friday "><span class="dayName">Piątek</span>
                 <div id="hour0" class="hour"><span class="hournumber">0</span></div>
                 <div id="hour1" class="hour"><span class="hournumber">1</span></div>
                 <div id="hour2" class="hour"><span class="hournumber">2</span></div>
@@ -150,7 +151,7 @@
                 <div id="hour22" class="hour"><span class="hournumber">22</span></div>
                 <div id="hour23" class="hour"><span class="hournumber">23</span></div>
             </div>
-            <div class="day"><span class="dayName">Sobota</span> 
+            <div class="day" id="saturday"><span class="dayName">Sobota</span> 
                 <div id="hour0" class="hour"><span class="hournumber">0</span></div>
                 <div id="hour1" class="hour"><span class="hournumber">1</span></div>
                 <div id="hour2" class="hour"><span class="hournumber">2</span></div>
@@ -176,7 +177,7 @@
                 <div id="hour22" class="hour"><span class="hournumber">22</span></div>
                 <div id="hour23" class="hour"><span class="hournumber">23</span></div>
             </div>
-            <div class="day"><span class="dayName">Niedziela</span> 
+            <div class="day" id="sunday"><span class="dayName">Niedziela</span> 
                 <div id="hour0" class="hour"><span class="hournumber">0</span></div>
                 <div id="hour1" class="hour"><span class="hournumber">1</span></div>
                 <div id="hour2" class="hour"><span class="hournumber">2</span></div>
@@ -206,7 +207,11 @@
         </div>
         <!-- END Day section -->
         <div class="toolbar">
-            Toolbar
+            <div class="tools">
+            <button>Dodaj strefe</button>
+            <button>Dodaj do strefy</button>
+            <button></button>
+        </div>
         </div>
       </div>
 <div class="tasks">
@@ -242,6 +247,24 @@
     <div class="task">Test10</div>
 </div>
     </article>
-    <footer>Foot</footer>
+
+<!-- LOGIN SECTION -->
+<div class="loginSection "id="loginSection" style="display: none;">
+
+    <div class="loginContent">
+        <input placeholder="Login" type="text" name="" id="loginLogin">
+
+        <input placeholder="Hasło" type="password" name="" id="loginPassword"> <br>  
+    
+
+        
+        <button type="submit">Zaloguj</button>
+        <p>Nie masz konta? Zarejestruj się</p>
+        
+         <button type="" onClick="document.location.href='/rejestracja.php'" >Rejestracja</button>
+        <button  type="" onclick="zamknijokno()">Zamknij okno</button>
+</div></div>
+<!-- END LOGIN SECTION -->
+    <footer class="">Stupkarze</footer>
 </body>
 </html>
