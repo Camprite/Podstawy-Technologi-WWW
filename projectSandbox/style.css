@@ -3,7 +3,9 @@
     src: url(fontRoboto/Roboto-Regular.ttf);
   }
   
+
 *{
+    /* font-size: 15px; */
     font-family: Roboto;
     margin: 0;
     padding: 0;
