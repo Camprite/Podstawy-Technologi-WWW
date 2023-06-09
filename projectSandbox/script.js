@@ -1,15 +1,33 @@
 
-
+let isLoginSectionVisible = false;
 function zaloguj(){
    // document.getElementsByClassName("blurred").style.filter = "blur(1px)";
+   if(isLoginSectionVisible){
+    
+    document.getElementById("loginSection").getBoundingClientRect();
+    document.getElementById("loginSection").style.opacity = "0";
+   
+    setTimeout(() => {
+        document.getElementById("loginSection").style.display = "none";
+      }, "1000");
 
+    isLoginSectionVisible = false;
+   }else{
 
     document.getElementById("loginSection").style.display = "flex";
-
-
-}
+    // LINIJKA POWYŻEJ POWODUJE PRZEŁADOWANIE ELEMENTU WRAZ ZE STYLAMI
+    document.getElementById("loginSection").getBoundingClientRect(); 
+    document.getElementById("loginSection").style.opacity = "1";
+    
+    isLoginSectionVisible = true;
+}}
 function zamknijokno(){
-    document.getElementById("loginSection").style.display = "none";
+    document.getElementById("loginSection").getBoundingClientRect();
+    document.getElementById("loginSection").style.opacity = "0";
+   
+    setTimeout(() => {
+        document.getElementById("loginSection").style.display = "none";
+      }, "1000");
 
 }
 function rejestracja(){
@@ -46,7 +64,7 @@ document.addEventListener('mousedown', function ( e ) {
     e.target.style.backgroundColor = "red";
     hourSet.add(e.target.id);
     hourSetObjects.add(e.target);
-    console.log(e.target.id);
+    // console.log(e.target.id);
     // console.log(day);
     }
     document.addEventListener("mouseover", function (event) {
@@ -86,8 +104,8 @@ function resetZaznaczonejStrefy(){
         element.style.backgroundColor = defaultBackgroundColor;
         day.style.backgroundColor = defaultBackgroundColor;
         
-        console.log(element);
-        console.log("tes");
+        // console.log(element);
+        // console.log("tes");
     });
 
     defaultBackgroundColor = null;

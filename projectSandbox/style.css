@@ -176,6 +176,8 @@ footer{
 
 }
 .loginSection{
+    transition: 1s;
+    opacity: 0;
     border-radius: 20px;
     /* padding-top: 100px; */
     height: 70vh;
@@ -183,11 +185,16 @@ footer{
     z-index: 999;
     top: 10%;
     left: 30%;
-    background-color: blueviolet;
+    background-color: rgba(114, 114, 114, 0.685);
+    backdrop-filter: blur(5px);
     align-items: center;
     position: fixed;
     flex-direction: column;
     display: flex;
+}
+#active{
+    transition: 2s;
+    background-color: #ec3535;
 }
 .loginSection>*{
     background-color: inherit;
@@ -199,12 +206,13 @@ footer{
 }
 
 .loginContent{
+    background-color: rgba(0, 0, 0, 0);
     user-select: none;
     text-align: center;
     margin-top: 3rem;
 }
 .loginContent>button{
-    background-color: blue;
+    background-color: rgb(71, 75, 78);
     border-radius: 5px;
     border-style: none;
     padding: 3%;
@@ -227,11 +235,12 @@ footer{
     background-color: rgb(168, 151, 151);
 }
 .loginContent>input{
+   
     border-radius: 20px;
     padding: 3%;
 }
 .loginContent>input::placeholder{
     text-align: center;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.5)
+    color: rgba(255, 255, 255, 0.5)
 }
