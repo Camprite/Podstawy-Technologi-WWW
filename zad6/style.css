@@ -1,5 +1,40 @@
 body{
-    background-color: #00000;
+background-color: #000000;
+color: #FFFFFF;
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+h1{
+    background: linear-gradient(#e66465, #9198e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+img{
+    border-radius: 50%;
+}
+li{
+    background-color: #FFFFFF;
+    color: #002137;
+    border-radius: 10px;
+}
+#header{
+    font-size: large;
+
+}
+textarea{
+    border-radius: 20px;
+
+    margin: 20px;
+    padding: 20px;
+}
+select{
+    border-radius: 10px;
+    max-width: 30vw;
+}
+button{
+    border-radius: 20px;
+    max-width: 30vw;
 }
 .class51{
 background-color: #213700;
